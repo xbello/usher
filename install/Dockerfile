@@ -9,9 +9,10 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
 WORKDIR /HOME/kentsource
 RUN wget http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/faSomeRecords
 RUN wget http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/faSize
+RUN wget http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/faToVcf
 RUN chmod 775 *
 WORKDIR /HOME
-RUN git clone https://github.com/yatisht/usher.git 
+RUN git clone https://github.com/xbello/usher.git 
 WORKDIR usher
 ## Checkout latest release
 #RUN git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
